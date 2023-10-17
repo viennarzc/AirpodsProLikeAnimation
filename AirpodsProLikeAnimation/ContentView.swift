@@ -19,7 +19,6 @@ struct ContentView: View {
     @State private var selectedMode: Mode = .off
     
     var body: some View {
-        VStack {
             HStack {
                 ZStack {
                     if selectedMode == .noiseCancellation {
@@ -47,7 +46,7 @@ struct ContentView: View {
                 ZStack {
                     if selectedMode == .off {
                         Circle()
-                            .fill(Color.blue)
+                            .fill(Color.gray)
                             .frame(width: 60, height: 60)
                             .matchedGeometryEffect(id: "selection", in: circleAnimate)
                         
@@ -91,9 +90,6 @@ struct ContentView: View {
             .frame(width: 300)
             .background(Capsule())
             .font(.title2)
-        }
-        .frame(maxWidth: .infinity)
-        .padding()
     }
 }
 
